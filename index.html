@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
 
@@ -60,7 +59,7 @@
             embedded arjs='trackingMethod: best; sourceType: webcam; debugUIEnabled: false;'>
     
             <a-assets>
-                <video src="./video.mp4"
+                <video src="https://cors-anywhere.herokuapp.com/https://www.w3schools.com/html/mov_bbb.mp4"
                     preload="auto" id="vid" response-type="arraybuffer" loop
                     crossorigin webkit-playsinline autoplay muted playsinline>
                 </video>
@@ -68,16 +67,15 @@
     
             <a-nft
                 videohandler
-                type='nft' url='./assets/kamau'
+                type='nft' url='./video.mp4'
                 smooth="true" smoothCount="10" smoothTolerance="0.01" smoothThreshold="5"
             >
                 <a-video
                     src="#vid"
-                    
-                    position="50 150 -100"
+                    position='50 150 -100'
                     rotation="-90 0 0"
-                    class="clickable"
-                    
+                    width='300'
+                    height='175'
                     >
                 </a-video>
             </a-nft>
