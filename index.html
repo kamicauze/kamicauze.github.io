@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
     <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
 
     <script src='https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js'></script>
@@ -61,7 +62,7 @@
             <a-assets>
                 <video src="./video.mp4"
                     preload="auto" id="vid" response-type="arraybuffer" loop
-                    crossorigin webkit-playsinline autoplay muted playsinline>
+                    crossorigin webkit-playsinline autoplay  playsinline>
                 </video>
             </a-assets>
     
@@ -72,9 +73,11 @@
             >
                 <a-video
                     src="#vid"
-                    position='50 150 -100'
-                    width='300'
-                    height='175'
+                    scale="1 1 1"
+                    position="0 0.1 0"
+                    rotation="-90 0 0"
+                    class="clickable"
+                    gesture-handler
                     >
                 </a-video>
             </a-nft>
